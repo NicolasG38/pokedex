@@ -7,14 +7,14 @@ const pokemonList = [
     }
 ]
 
-function PokemonCard(){
+function PokemonCard(props){
+    console.log(props)
     const pokemon = pokemonList[1]
 
     return (
         <figure>
             {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} /> : <p>???</p>}
             {pokemon.name ? <figcaption>{pokemon.name}</figcaption> : <p>???</p>}
-
         </figure>
     )
 }
